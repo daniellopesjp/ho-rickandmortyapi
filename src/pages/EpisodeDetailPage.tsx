@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import CharacterListByEpisode from '../components/CharacterListByEpisode';
+import CharacterListByEpisode from '../components/character/CharacterListByEpisode';
 import BackButton from '../components/BackButton';
 
 interface Episode {
@@ -33,7 +33,7 @@ const EpisodeDetailPage: React.FC = () => {
   }
 
   return (
-    <div>
+    <div className='container'>
        <BackButton /> 
       <h1>{episode.name}</h1>
       <p>Ar: {episode.air_date}</p>

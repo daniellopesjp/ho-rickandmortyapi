@@ -3,8 +3,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import ResidentsList from '../components/ResidentsList';
 import BackButton from '../components/BackButton';
+import ResidentsList from '../components/location/ResidentsList';
 
 interface Location {
   id: number;
@@ -33,7 +33,7 @@ const LocationDetailPage: React.FC = () => {
   }
 
   return (
-    <div>
+    <div className='container'>
         <BackButton />
       <h1>{location.name}</h1>
       <p>Tipo: {location.type}</p>

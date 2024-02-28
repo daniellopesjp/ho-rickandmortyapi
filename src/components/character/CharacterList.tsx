@@ -32,7 +32,7 @@ const CharacterList: React.FC = () => {
 
   return (
     <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-      {/* Renderize os cards dos personagens em uma grade */}
+      
       {characters.map((character) => (
         <CharacterCard key={character.id} character={character} />
       ))}

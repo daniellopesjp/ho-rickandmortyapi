@@ -21,7 +21,7 @@ const LocationsPage: React.FC = () => {
   }, []);
 
   return (
-    <div>
+    <div className='container'>
       <h1>Página de Localizações</h1>
       <ul>
         {locations.map((location: any) => (

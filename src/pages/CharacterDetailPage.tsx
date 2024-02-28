@@ -3,8 +3,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import EpisodeList from '../components/EpisodeList';
 import BackButton from '../components/BackButton';
+import EpisodeList from '../components/episode/EpisodeList';
 
 interface Character {
   id: number;
@@ -39,7 +39,7 @@ const CharacterDetailPage: React.FC = () => {
   }
 
   return (
-    <div>
+    <div className='container'>
         <BackButton />
       <h1>{character.name}</h1>
       <img src={character.image} alt={character.name} />
@@ -48,6 +48,7 @@ const CharacterDetailPage: React.FC = () => {
       <p>Última localização conhecida: {character.location.name}</p>
       
       <EpisodeList characterId={character.id} /> {/* Lista de episódios em que o personagem aparece */}
+      
     </div>
   );
 };

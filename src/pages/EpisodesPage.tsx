@@ -21,7 +21,7 @@ const EpisodesPage: React.FC = () => {
   }, []);
 
   return (
-    <div>
+    <div className='container'>
       <h1>Página de Episódios</h1>
       <ul>
         {episodes.map((episode: any) => (
